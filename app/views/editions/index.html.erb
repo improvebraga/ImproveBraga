@@ -1,0 +1,33 @@
+<h1>Listing editions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Local</th>
+      <th>Photos</th>
+      <th>Newsletter</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @editions.each do |edition| %>
+      <tr>
+        <td><%= edition.date %></td>
+        <td><%= edition.local %></td>
+        <td><%= edition.photos %></td>
+        <td><%= edition.newsletter %></td>
+        <td><%= link_to 'Show', edition %></td>
+        <td><%= link_to 'Edit', edit_edition_path(edition) %></td>
+        <td><%= link_to 'Destroy', edition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Edition', new_edition_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @edition.date %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @edition.local %>
+</p>
+
+<p>
+  <strong>Photos:</strong>
+  <%= @edition.photos %>
+</p>
+
+<p>
+  <strong>Newsletter:</strong>
+  <%= @edition.newsletter %>
+</p>
+
+<%= link_to 'Edit', edit_edition_path(@edition) %> |
+<%= link_to 'Back', editions_path %>
