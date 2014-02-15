@@ -1,4 +1,5 @@
 Site::Application.routes.draw do
+  get "home/home"
   resources :projects_editions
 
   resources :media
