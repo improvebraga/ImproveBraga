@@ -21,6 +21,14 @@
 </p>
 
 <%= image_tag @project.thumbnail.url %>
+<p>
+  <strong>Outras:</strong>
+</p>
+
+
+<% @project.pictures.each do |p| %>
+   <%= image_tag p.image.url %>
+<% end %>
 
 <p>
   <strong>Authors:</strong>

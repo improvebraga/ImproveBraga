@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    @project.pictures.build
   end
 
   # GET /projects/1/edit
@@ -68,7 +69,7 @@ class ProjectsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def project_params
-      params.require(:project).permit(:title, :description, :done, :todo, :authors, :website, :thumbnail)
+    def project_params      
+      params.require(:project).permit(:title, :description, :done, :todo, :authors, :website, :thumbnail, pictures_attributes: [:image_file_name, :image_content_type, :image_file_size, :image_updated_at, :image, :id, :_destroy])
     end
 end
