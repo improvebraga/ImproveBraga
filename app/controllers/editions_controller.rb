@@ -1,6 +1,6 @@
 class EditionsController < ApplicationController
   before_action :set_edition, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate, except: [:show, :index]
   # GET /editions
   # GET /editions.json
   def index
