@@ -1,7 +1,11 @@
 Site::Application.routes.draw do
-  resources :editions
+  resources :projects_editions
+
+  resources :media
 
   resources :projects
+
+  resources :editions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

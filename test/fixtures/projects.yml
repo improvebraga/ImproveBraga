@@ -4,7 +4,7 @@ one:
   title: MyString
   description: MyText
   done: MyText
-  to-do: 
+  todo: 
   authors: MyString
   website: MyString
 
@@ -12,6 +12,6 @@ two:
   title: MyString
   description: MyText
   done: MyText
-  to-do: 
+  todo: 
   authors: MyString
   website: MyString

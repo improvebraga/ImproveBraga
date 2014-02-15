@@ -1,0 +1,29 @@
+<h1>Listing projects_editions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Edition</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects_editions.each do |projects_edition| %>
+      <tr>
+        <td><%= projects_edition.project_id %></td>
+        <td><%= projects_edition.edition_id %></td>
+        <td><%= link_to 'Show', projects_edition %></td>
+        <td><%= link_to 'Edit', edit_projects_edition_path(projects_edition) %></td>
+        <td><%= link_to 'Destroy', projects_edition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Projects edition', new_projects_edition_path %>
