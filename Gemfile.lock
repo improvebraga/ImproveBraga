@@ -58,6 +58,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
+    nested_form (0.3.2)
     paperclip (3.4.2)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -126,6 +127,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  nested_form
   paperclip (~> 3.0)
   paperclip-dropbox (>= 1.1.7)
   rails (= 4.0.0)

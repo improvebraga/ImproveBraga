@@ -1,8 +1,6 @@
-app_key: "cmwcb11mcczcnqo"
-app_secret: "v0k6yldzvtcvc11"
-access_token: "yjqamnomtjsuefgv"
-access_token_secret: "1tbfgjb9mdos5yi"
+app_key: "1fg18usrz6oxhyz"
+app_secret: "90q36zhf4qjk117"
+access_token: "001ct3g2f5ugvdvj"
+access_token_secret: "nxlrdpjw9cyq7o8"
 user_id: "16257713"
-access_type: "dropbox"
-
-
+access_type: "app_folder"

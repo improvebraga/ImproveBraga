@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140215154518) do
+ActiveRecord::Schema.define(version: 20140215165447) do
 
   create_table "editions", force: true do |t|
     t.string   "date"
@@ -41,6 +41,10 @@ ActiveRecord::Schema.define(version: 20140215154518) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "edition_id"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "projects_editions", force: true do |t|
