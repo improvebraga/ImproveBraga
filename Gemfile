@@ -41,6 +41,12 @@ gem "nested_form"
 gem 'high_voltage', '~> 2.1.0'
 
 gem 'rails_12factor', group: :production
+
+gem "therubyracer"
+gem "less-rails" 
+gem 'twitter-bootstrap-rails'
+
+gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
