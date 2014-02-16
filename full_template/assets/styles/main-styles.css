@@ -133,7 +133,7 @@
 .up-bold { font-weight: 500; text-transform: uppercase; }
 .bold { font-family: 'Roboto-Bold'; }
 
-.gray-section { background-color: #f5f5f5; }
+.gray-section { background-color: #f5f5f5; border: 1px solid #e5e5e5; border-left: none; border-right: none; }
 .section-title { display: table; margin: 5px 0 5px 0; font-family: 'Roboto Bold'; text-transform: uppercase; font-size: 16px; color: #f26663; border-bottom: 4px solid rgba(204, 204, 204, 0.5); }
 
 .posted-at { font-family: 'Roboto Thin'; font-size: 12px; color: #aaa; margin-top: 5px; margin-bottom: 20px; }
@@ -231,6 +231,8 @@ div.title-row
 
 	color: #fff;
 	text-align: center;
+
+	overflow: hidden;
 }
 
 	#home-header .container
@@ -242,6 +244,9 @@ div.title-row
 	{
 		margin-top: 40px;
 		margin-bottom: 20px;
+
+		-webkit-animation-delay: 1s;
+  		animation-delay: 1s;
 	}
 
 footer
@@ -260,6 +265,8 @@ footer
 	background-size: cover;
 	background-position: center center;
 	margin-bottom: 20px;
+
+	border-radius: 3px;
 }
 
 	.list-thumbnail div.image > div.details
@@ -275,6 +282,7 @@ footer
 		opacity: 0;
 		padding: 10px 20px;
 		z-index: 1;
+		border-radius: 3px;
 
 		-webkit-transition: 250ms linear all;
 		-moz-transition: 250ms linear all;
@@ -287,41 +295,15 @@ footer
 	}
 
 /* UI Styles */
-.btn
-{
-	position: relative;
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #555;
-	background: #eaeaea;
-	border-radius: 3px;
-
-	-webkit-transition: 250ms linear all;
-	-moz-transition: 250ms linear all;
-	transition: 250ms linear all
-}
-
-	.btn:active
-	{
-		box-shadow: none;
-		top: 1px;
-	}
-
-.btn-big-red,
-.btn-big-red:active,
-.btn-big-red:focus
+.btn.btn-big-red,
+.btn.btn-big-red:active,
+.btn.btn-big-red:focus
 {
 	padding: 15px 80px;
 	font-size: 16px;
 	background-color: #ad4844;
 	color: white;
 }
-
-	.btn-big-red:hover
-	{
-		background-color: #ff6360;
-		color: white;
-	}
 
 /* Bootstrap Changes */
 .container
@@ -356,3 +338,28 @@ footer
 		margin: 18px;
 	}
 }
+
+.btn
+{
+	position: relative;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #555;
+	background: #eaeaea;
+	border-radius: 3px;
+
+	-webkit-transition: 250ms linear all;
+	-moz-transition: 250ms linear all;
+	transition: 250ms linear all
+}
+	.btn:hover
+	{
+		background-color: #f26663;
+		color: white;
+	}
+
+	.btn:active
+	{
+		box-shadow: none;
+		top: 1px;
+	}
