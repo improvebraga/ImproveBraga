@@ -335,12 +335,12 @@ footer
 	.navbar-fixed-top .container,
 	.navbar-fixed-bottom .container
 	{
-		width: 970px;
+		max-width: 970px;
 	}
 
 	.span12
 	{
-		width: 970px;
+		max-width: 970px;
 	}
 
 	.navbar-nav > li > a
