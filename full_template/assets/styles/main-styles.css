@@ -232,7 +232,7 @@ div.title-row
 	margin-bottom: 30px;
 }
 
-#home-header
+#home-header, .page-header
 {
 	margin-top: 75px;
 	border-bottom: 5px solid #d86562;
@@ -258,6 +258,22 @@ div.title-row
 
 		-webkit-animation-delay: 1s;
   		animation-delay: 1s;
+	}
+
+.page-header
+{
+	text-align: left;
+	margin-bottom: 0;
+}
+
+	.page-header .container
+	{
+		padding: 25px 0;
+	}
+
+	.page-header .container .pagination
+	{
+		margin-top: 25px;
 	}
 
 footer
@@ -289,15 +305,26 @@ footer
 		left: 0;
 		right: 0;
 		background-color: #f17370;
-		border: 5px solid white;
 		opacity: 0;
 		padding: 10px 20px;
 		z-index: 1;
 		border-radius: 3px;
 
+		color: #fff;
+
 		-webkit-transition: 250ms linear all;
 		-moz-transition: 250ms linear all;
 		transition: 250ms linear all
+	}
+
+	.list-thumbnail div.image > div.details > .posted-at
+	{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0 20px;
+		color: #fff;
 	}
 
 	.list-thumbnail div.image:hover > div.details
@@ -306,6 +333,7 @@ footer
 	}
 
 /* UI Styles */
+
 .btn.btn-big-red,
 .btn.btn-big-red:active,
 .btn.btn-big-red:focus
@@ -316,7 +344,14 @@ footer
 	color: white;
 }
 
-/* Bootstrap Changes */
+
+
+/*
+ * Bootstrap Changes
+ */
+
+ /* Blocks */
+
 .container
 {
 	padding: 50px 0;
@@ -350,6 +385,9 @@ footer
 	}
 }
 
+
+/* UI Styles */
+
 .btn
 {
 	position: relative;
@@ -373,4 +411,43 @@ footer
 	{
 		box-shadow: none;
 		top: 1px;
+	}
+
+
+/* Pagination */
+
+.pagination>li>a
+{
+	border: none;
+	margin: 0 2px;
+	border-radius: 3px;
+	background-color: #ad4844;
+	color: #fff;
+	opacity: 0.5;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus,
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus
+{
+	background-color: #ad4844;
+	color: #fff;
+	opacity: 1;
+}
+
+	.pagination>li:first-child>a
+	{
+		margin-left: 0;
+	}
+
+	.pagination>li:last-child>a
+	{
+		margin-right: 0;
 	}
