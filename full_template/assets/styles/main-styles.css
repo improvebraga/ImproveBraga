@@ -138,7 +138,6 @@
 .bold { font-family: 'Roboto-Bold'; }
 
 .gray-section { background-color: #f5f5f5; border: 1px solid #e5e5e5; border-left: none; border-right: none; }
-.section-title { display: table; margin: 5px 0 5px 0; font-family: 'Roboto Bold'; text-transform: uppercase; font-size: 16px; color: #f26663; border-bottom: 4px solid rgba(204, 204, 204, 0.5); }
 
 .posted-at { font-family: 'Roboto Thin'; font-size: 12px; color: #aaa; margin-top: 5px; margin-bottom: 20px; }
 .posted-at::before { content: '\2014\00a0\00a0'; }
@@ -166,6 +165,7 @@ body
 	font-family: 'Roboto';
 	font-weight: 100;
 	font-style: normal;
+	font-size: 14px;
 	color: #555;
 }
 
@@ -178,7 +178,8 @@ h1
 	margin-bottom: 40px;
 }
 
-h2
+h2,
+.subsection-title
 {
 	font-family: 'Roboto Thin';
 	font-size: 28px;
@@ -232,6 +233,41 @@ div.title-row
 	margin-bottom: 30px;
 }
 
+.section-title,
+.subsubsection-title
+{
+	display: table;
+	margin: 5px 0 5px 0;
+	font-family: 'Roboto Bold';
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #f26663;
+	border-bottom: 4px solid #e6e6e6;
+}
+
+.subsection-title
+{
+	margin-top: 8px;
+}
+
+	.subsection-title .posted-at
+	{
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+.subsubsection-title
+{
+	margin: 25px 0 5px 0;
+	font-size: 14px;
+}
+
+.description
+{
+	line-height: 22px;
+}
+
 #home-header, .page-header
 {
 	margin-top: 75px;
@@ -260,6 +296,17 @@ div.title-row
   		animation-delay: 1s;
 	}
 
+#project-details .subsection-title
+{
+	margin-bottom: 0;
+}
+
+.goto-url a
+{
+	font-family: "Roboto Thin";
+	color: #ddd;
+}
+
 .page-header
 {
 	text-align: left;
@@ -278,6 +325,7 @@ div.title-row
 
 footer
 {
+	position: relative;
 	background-color: #444;
 	color: #aaa;
 	text-transform: uppercase;
@@ -451,3 +499,76 @@ footer
 	{
 		margin-right: 0;
 	}
+
+
+/* Carousel */
+
+.carousel-inner
+{
+	max-height: 450px;
+}
+
+.carousel-inner .item
+{
+	border-radius: 3px !important;
+	overflow: hidden;
+}
+
+.carousel-control .glyphicon
+{
+	font-size: 22px;
+}
+
+.carousel-control.left,
+.carousel-control.right
+{
+	position: absolute;
+	background: #eaeaea !important;
+	text-shadow: none !important;
+	opacity: 0.7 !important;
+	width: 48px;
+	height: 48px;
+	font-size: 12px;
+	color: #555;
+	border-radius: 3px;
+}
+
+.carousel-control.left:hover,
+.carousel-control.right:hover
+{
+	background: white !important;
+	opacity: 1 !important;
+}
+
+.carousel-control.left
+{
+	left: auto;
+	right: 58px;
+	top: 5px;
+}
+
+	.carousel-control.left .glyphicon-chevron-left,
+	.carousel-control.right .glyphicon-chevron-right
+	{
+		position: absolute;
+		margin-top: -11px;
+	}
+
+.carousel-control.right
+{
+	top: 5px;
+	right: 5px;
+}
+
+	.carousel-control.right .glyphicon-chevron-right
+	{
+		left: 50%;
+	}
+
+@media( max-width: 767px ) {
+	.carousel-control.right .glyphicon-chevron-right,
+	.carousel-control.left .glyphicon-chevron-left
+	{
+		margin-left: -11px;
+	}
+}
