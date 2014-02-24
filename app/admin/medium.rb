@@ -1,4 +1,4 @@
-ActiveAdmin.register Media do
+ActiveAdmin.register Medium do
 
   
   # See permitted parameters documentation:
